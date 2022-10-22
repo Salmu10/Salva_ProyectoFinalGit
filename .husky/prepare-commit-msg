@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if git symbolic-ref --short HEAD | grep -E '(hotfix)'; then
+        if grep -E '(A corregir por:)'; then
+        echo "Commit realizado con exito"
+        exit 0;
+        fi;
+        echo "A corregir por:'";
+        exit 1;
+fi;
