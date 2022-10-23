@@ -1,10 +1,11 @@
 #!/bin/bash
 
 if git symbolic-ref --short HEAD | grep -E '(hotfix)'; then
-        if grep -E '(A corregir por:)'; then
+        if grep "A corregir por:" .git/COMMIT_EDITMSG; then
         echo "Commit realizado con exito"
         exit 0;
         fi;
-        echo "A corregir por:'";
+        echo "Error en la sintaxis!";
+        echo "El mensaje del commit debe contener: 'A corregir por:'";
         exit 1;
 fi;
