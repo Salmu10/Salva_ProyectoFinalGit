@@ -1,8 +1,0 @@
-{
-    "plugins": [ "html" ],
-    "settings": {
-        "html/html-extensions": [".html"],
-        "html/indent": "+3",
-        "html/report-bad-indent": "error"
-    }
-}
