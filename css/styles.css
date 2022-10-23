@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    font-family: sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: grid;
+    padding: 0.5em 0;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+}
+
+
+.header .nombre {
+    margin-left: 2%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(3, 0.4fr);
+    gap: 0px 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .nombre img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 40%;
+    margin-left: 30px;
+}
+
+.header .nombre h1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 0.4fr);
+    gap: 0px 15px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.header nav a {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    padding: 5px;
+    color: #333;
+    background-color: mintcream;
+    border-radius: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header nav a {
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    background-color: rgb(202, 204, 203);
+}
+
+main {
+    padding: 10px;
+    margin-left: 3%;
+}
+
+.introduccion {
+    display: block;
+}
+
+main h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+main h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+main p {
+    padding: 15px;
+    text-align: justify;
+    margin-right: 3%;
+}
+
+.usuarios img{
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+.titulos_usuarios {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer {
+    padding: 1.5em 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    font-weight: bold;
+}

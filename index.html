@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Salva Proyecto Final Git</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="nombre">
+            <img src="img/Logo_Salva.png">
+            <h1>Salva Muñoz Úbeda</h1>
+        </div>
+        <nav>
+            <a href="#introduccion">Introducción</a>
+            <a href="#usuario1">Usuario 1</a>
+            <a href="#usuario2">Usuario 2</a>
+            <a href="#usuario3">Usuario 3</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="introduccion" id="introduccion">
+            <h1>Introducción: </h1>
+            <h2>¿Qué es git?</h2>
+            <p>Git es un proyecto de código abierto maduro y con un mantenimiento activo que desarrolló originalmente 
+            Linus Torvalds, el famoso creador del kernel del sistema operativo Linux, en 2005.<br><br>
+
+            Git, que presenta una arquitectura distribuida, es un ejemplo de DVCS (sistema de control de versiones 
+            distribuido, por sus siglas en inglés). La copia de trabajo del código de cada desarrollador es también 
+            un repositorio que puede albergar el historial completo de todos los cambios.<br><br>
+                
+            Además de contar con una arquitectura distribuida, Git se ha diseñado teniendo en cuenta el rendimiento, 
+            la seguridad y la flexibilidad.
+            </p>
+            <h2>¿Qué es git flow, y por qué lo utilizamos en nuestro proyecto?</h2>
+            <p>Gitflow es un modelo alternativo de creación de ramas en Git en el que se utilizan ramas de función y 
+            varias ramas principales. Fue Vincent Driessen en nvie quien lo publicó por primera vez y quien lo popularizó.<br><br>
+
+            Según este modelo, los desarrolladores crean una rama de función y retrasan su fusión con la rama principal
+            del tronco hasta que la función está completa. Gitflow puede utilizarse en proyectos que tienen un ciclo de 
+            publicación programado. Este flujo de trabajo no añade ningún concepto o comando nuevo, aparte de los que se 
+            necesitan para el flujo de trabajo de ramas de función.<br><br>
+                
+            Lo utilizamos en nuestro proyecto por que cumple los requerimientos de trabajo en equipo que requiere la 
+            práctica y así poder tener un flujo de trabajo adecuado entre los miembros del equipo. Es un método mas 
+            tedioso y largo de mantener pero es más seguro
+            </p>
+        </div>
+        <div class="usuarios" id="usuario1">
+            <h1 class="titulos_usuarios">USUARIO 1</h1>
+            <h1>Creación del proyecto</h1>
+            <p>El usuario 1 creará el repositorio donde aplicará la plantilla de referencia que, como dice en el github de esta,
+            se hará con el comando "npx create-html5-boilerplate new-site". Posteriormente, en esta nueva carpeta se hará un 
+            "npm install" para crear el proyecto.
+            </p>
+            <img src="img/Captura_FinalGit_1.PNG">
+            <p>Una vez creado el proyecto, el usuario 1 modificará el index.html del proyecto y lo adaptará a como se pide en la
+            práctica.
+            </p>
+            <h1>Creación del repositorio remoto</h1>
+            <img src="img/Captura_FinalGit_2.PNG">
+            <p>El siguiente paso será inicializar git en el repositirio y añadir los archivos al repositorio local para posteriormente
+            realizar el commit y agregarlo al repositorio remoto que se habrá creado en github.
+            </p>
+            <img src="img/Captura_FinalGit_3.PNG">
+            <img src="img/Captura_FinalGit_4.PNG">
+            <img src="img/Captura_FinalGit_5.PNG">
+            <h1>Librería Husky</h1>
+            <p>Ahora el usuario 1 agregará la libreria husky al proyecto para realizar los hooks correspondientes. Creará los archivos hooks 
+            dedeados: post-checkout y pre-commit-msg.
+            </p>
+            <img src="img/Captura_FinalGit_6.PNG">
+            <p><strong>Prepare-commit-msg:</strong> comprobará que siempre que se realice un commit en la rama hotfix exista una persona asignada para 
+                verificar que todo este correcto. Para ello, deberá comprobar que el mensaje de commit contiene la frase “A corregir por: …”.
+            </p>
+            <img src="img/Captura_FinalGit_7.PNG">
+            <p><strong>Post-checkout:</strong> mostrará en consola un mensaje con un dibujo hecho con caracteres ascii una vez hagamos el checkout 
+                de una rama del proyecto.
+            </p>
+            <img src="img/Captura_FinalGit_8.PNG">
+            <p>A continuación, se realizará un "git add ." y su posterior "git commit" para luego subirlo al repositorio remoto con un "git push".
+            </p>
+            <img src="img/Captura_FinalGit_9.PNG">
+            <h1>Git flow y ramas correspondientes</h1>
+            <p>El usuario 1 creará las ramas establecidas por la metodología git flow para el correcto flujo del proyecto. Empezará creando la rama 
+            develop.
+            </p>
+            <img src="img/Captura_FinalGit_10.PNG">
+            <p>Además, se añadirá la rama al repositorio remoto con un "git push origin develop".</p>
+            <img src="img/Captura_FinalGit_11.PNG">
+        </div>
+        <div class="usuarios" id="usuario2">
+            <h1 class="titulos_usuarios">USUARIO 2</h1>
+            <h1>Eslint plugin</h1>
+            <p>Antes de realizar sus funciones, el usuario 2 deberá haber agregado la dependencia de trabajo de eslint, para ello el usuario 1 realizará
+            un "npm install eslint eslint-plugin-html". Este verificará el correcto formato en los ficheros html.
+            </p>
+            <img src="img/Captura_FinalGit_12.PNG">
+            <p>En este plugin, se configurará el fichero ".eslintrc.json". La configuración comprueba que el indentado se realice con 6 espacios. Además, 
+            se añadirá un nuevo hook "pre-commit" que ejecutará el eslint.
+            </p>
+            <img src="img/Captura_FinalGit_13.PNG">
+            <img src="img/Captura_FinalGit_14.PNG">
+            <p>Posteriormente, lo subirá al repositorio remoto con un commit y un push.
+            </p>
+            <img src="img/Captura_FinalGit_15.PNG">
+            <h1>Creación de ramas features</h1>
+            <p>El usuario 2, desde la rama develop, creará las dos ramas feature que pide la práctica. Feature/contenidoHTML y feature/atributos/HTML.
+            </p>
+            <img src="img/Captura_FinalGit_16.PNG">
+            <p>Desde la rama Feature/contenidoHTML modificará el index.html y lo subirá al repositorio remoto haciendo un push de esta rama.
+            </p>
+            <img src="img/Captura_FinalGit_17.PNG">
+            <img src="img/Captura_FinalGit_18.PNG">
+            <h1>Creación de pull request</h1>
+            <p>Después de realizar el push, y haber creado un issue en github, el usuario 2 creará una pull request en github en la cual realizará un 
+            merge de la rama feature/contenidoHTML con la rama develop.
+            </p>
+            <p><strong>Issue Usuario 2</strong></p>
+            <img src="img/Captura_FinalGit_19.PNG">
+            <p><strong>Pull request Usuario 2</strong></p>
+            <img src="img/Captura_FinalGit_20.PNG">
+            <img src="img/Captura_FinalGit_21.PNG">
+            <p>El siguiente paso será realizar el mismo proceso pero desde la rama feature/atributoHTML
+            </p>
+            <img src="img/Captura_FinalGit_22.PNG">
+            <img src="img/Captura_FinalGit_23.PNG">
+            <p><strong>Pull request Usuario 2</strong></p>
+            <img src="img/Captura_FinalGit_24.PNG">
+            <img src="img/Captura_FinalGit_25.PNG">
+            <p>Una vez hechos los merges de las ramas feature, se podrán marcar como realizadas las tareas en el issue creado previamente.
+            </p>
+            <img src="img/Captura_FinalGit_26.PNG">
+            <p>A continuación, se volverá a la rama develop y se realizaráun pull para actualizar el repositorio local.
+            </p>
+            <img src="img/Captura_FinalGit_27.PNG">
+        </div>
+        <div class="usuarios" id="usuario3">
+            <h1 class="titulos_usuarios">USUARIO 3</h1>
+            <h1>Creación de rama feature</h1>
+            <p>Ahora, el Usuario 3 creará una nueva rama feature desde la rama de develop para realizar su tarea. Para ello ara un
+            "git branch feature/estilosCSS".
+            </p>
+            <img src="img/Captura_FinalGit_28.PNG">
+            <p>Además, como ya realizó el Usuario 2, el Usuario 3 creará una nueva issue con la lista de tareas que debe realizar. 
+            </p>
+            <img src="img/Captura_FinalGit_29.PNG">
+            <p>El Usuario 3 realizará los cambios correspondientes desde la rama de features/estilosCSS y lo subirá al repositorio remoto.
+            </p>
+            <img src="img/Captura_FinalGit_30.PNG">
+            <p><strong>Pull request Usuario 3</strong></p>
+            <img src="img/Captura_FinalGit_31.PNG">
+            <img src="img/Captura_FinalGit_32.PNG">
+            <h1>Creación de rama release</h1>
+            <p>Primeramente, el Usuario 3 volverá a actualizar la rama develop haciendo un "git pull oriigin develop" para tener los últimos 
+            cambios del pull request en el repositorio local.
+            </p>
+            <img src="img/Captura_FinalGit_33.PNG">
+            <p>Posteriormente, el Usuario 3 creará una nueva rama llamada release/1.0 con un tag en el último commit realizado
+            </p>
+            <img src="img/Captura_FinalGit_34.PNG">
+            <img src="img/Captura_FinalGit_35.PNG">
+            <p>Una vez hecho esto, lo subirá al repositorio remoto con un "git push origin release/1.0 --tags" para agregar el tag también.
+            </p>
+            <img src="img/Captura_FinalGit_36.PNG">
+            <p>En el siguiente paso, el Usuario 3 juntará la rama release/1.0 con la rama master para tener actualizado el proyecto. Como en la 
+            rama release/1.0 no hay cambios, no hará falta juntarla con la rama develop también.
+            </p>
+            <img src="img/Captura_FinalGit_37.PNG">
+            <img src="img/Captura_FinalGit_38.PNG">
+            <p>Si todo se ha realizado correctamente, en la rama master deberiamos tener el proyecto actualizado y tener todos los cambios 
+            realizados en la rama develop y en las ramas feature. Para comprobarlo, se realiza un git pull origin master desde esta rama y 
+            se comprueba, por ejemplo, el contenido de index.html.
+            </p>
+            <img src="img/Captura_FinalGit_39.PNG">
+            <img src="img/Captura_FinalGit_40.PNG">
+            <p>Ahora también estará terminada la issue del Usuario 3.</p>
+            <img src="img/Captura_FinalGit_41.PNG">
+            <h1 class="titulos_usuarios">USUARIO 1</h1>
+            <p>Por último, desde la rama master, el Usuario 1 creará una nueva rama llamada hotfix/mejorasV_1_0 y su respectiva issue en github.
+            </p>
+            <img src="img/Captura_FinalGit_42.PNG">
+            <img src="img/Captura_FinalGit_43.PNG">
+            <p>Una vez situado en ella, el Usuario 1 realizará los cambios correspondientes, además se podrá comprobar el correcto funcionamiento 
+            del hook "prepare-commit-msg". Además, haremos también un push al repositorio remoto y realizará el pull request.  
+            </p>
+            <img src="img/Captura_FinalGit_44.PNG">
+            <img src="img/Captura_FinalGit_45.PNG">
+            <p><strong>Pull request Usuario 1</strong></p>
+            <img src="img/Captura_FinalGit_46.PNG">
+            <img src="img/Captura_FinalGit_47.PNG">
+            <p>Una vez hecha la pull request, también podremos cerrar la issue.</p>
+            <img src="img/Captura_FinalGit_48.PNG">
+            <p>Para terminar, desde la rama master además de hacer un pull para actualizarla, se podrán borrar ya las ramas de feuature y hotfix.
+            </p>
+            <img src="img/Captura_FinalGit_49.PNG">
+            <img src="img/Captura_FinalGit_50.PNG">
+            <p>Y también las ramas remotas. Y así dejar mas limpio el flujo de trabajo.</p>
+            <img src="img/Captura_FinalGit_51.PNG">
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div>Proyecto Final de Git creado por Salva Muñoz Úbeda</div>
+    </footer>
+
+</body>
+</html>
